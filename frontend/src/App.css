@@ -13,6 +13,21 @@
   }
 }
 
+@keyframes move {
+  0% {}
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes zoom {
+  0% {}
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .App {
   height: 100vh;
   text-align: center;
@@ -44,8 +59,40 @@
   animation-duration: 0.5s;
 }
 
+.small-icon {
+  height: 1.3em;
+  cursor: pointer;
+  margin: 0 0.3em;
+}
+
+.eye {
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
 .projects {
   margin: 3em auto;
+  padding: 0.5em;
+}
+
+.projects:before {
+  display:none;
+  content: "";
+  position: absolute;
+  background: none;
+  width: 100%;
+  height:100%;
+  left: 0;
+  border: 0.1px solid white;
+}
+
+.projects:hover:before {
+  display: block;
+  animation: move 1s forwards;
+}
+
+.projects:hover {
+  animation: zoom 1s forwards;
 }
 
 .projectBox {
@@ -53,7 +100,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 2em;
+  padding: 0 3em;
 }
 
 .projectPic {
@@ -67,6 +114,14 @@
 .projectInfo {
   width: 70%;
   margin: auto 1em;
+}
+
+.technologies {
+  display: block;
+  margin-top: 2em;
+  font-size: 0.8em;
+  color: #008f11;
+  text-align: right;
 }
 
 @media screen and (max-width: 1000px) {
