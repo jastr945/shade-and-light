@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
+import Project from './components/Project.js';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Parallax } from 'react-scroll-parallax';
+import {projects} from './content.js';
 
 class App extends Component {
-  setButtonHovered(value) {
-    console.log(this);
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      projects,
+      visibility: null
+    }
   }
+
+  setButtonHovered(value) {
+    // console.log(this);
+  }
+
+  handleIntersection(event) {
+      this.setState({
+        visibility: event.isIntersecting ? 'inview' : ''
+      });
+  }
+
   render() {
     return (
       <ParallaxProvider>
@@ -21,114 +39,21 @@ class App extends Component {
               <img className="icon" src={require('./static/gmail.png')} width={50} alt="LinkedIn"/>
             </div>
           </div>
-          <Parallax className="custom-class" x={[-25, 0]} tagOuter="figure">
-            <div className="projects"
-            onMouseEnter={this.setButtonHovered(true)}
-            onMouseLeave={this.setButtonHovered(false)}>
-              <div className="project">
-                <div className="projectBox">
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    <img className="small-icon eye" src={require('./static/eye-2-512.gif')} alt="View Demo"/>
-                    <img className="small-icon" src={require('./static/70d584e3-4eb3-4ed1-8df8-944e9b123089.svg')} alt="View on GitHub"/>
-                  </div>
-                </div>
-              </div>
-              <div className="technologies">- - - - - - - - - - - - - - Python, Django, Docker, React</div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[25, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                </div>
-              </div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[-25, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[25, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                </div>
-              </div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[-25, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[10, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                </div>
-              </div>
-            </div>
-          </Parallax>
-          <Parallax className="custom-class" x={[-10, 0]} tagOuter="figure">
-            <div className="projects">
-              <div className="project">
-                <div className="projectBox">
-                  <img className="projectPic"
-                  src="https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg" alt="project pic" />
-                  <div className="projectInfo">
-                    <p>A short description of a project featuring some of the technologies and tools...</p>
-                    eye-icon
-                    git-icon-grey
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Parallax>
+          {
+            this.state.projects.map((project, i) => {
+              let coordinates;
+              if ((i % 2) > 0) {
+                coordinates = [25, 0];
+              } else {
+                coordinates = [-25, 0];
+              }
+              return (
+                <Parallax className="custom-class" x={coordinates} tagOuter="figure">
+                  <Project project={project} index={i} />
+                </Parallax>
+              )
+            })
+          }
           <footer>
             <small>&copy;
               {(new Date().getFullYear())}
