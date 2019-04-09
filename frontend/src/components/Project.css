@@ -13,6 +13,18 @@
   }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform:scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform:scaleY(1);
+    display: block;
+  }
+}
+
 .small-icon {
   height: 1.3em;
   cursor: pointer;
@@ -81,10 +93,15 @@
 }
 
 .technologies {
-  display: block;
+  display: none;
   margin-top: 2em;
   font-size: 0.8em;
   color: #008f11;
+  animation: appear 0.5s forwards;
+}
+
+.hovered {
+  display: block;
 }
 
 @media screen and (max-width: 500px) {

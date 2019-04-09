@@ -65,6 +65,9 @@
   margin: 0 0.3em;
 }
 
+footer {
+  margin-top: 8em;
+}
 
 @media screen and (max-width: 1000px) {
   .mainContainer {

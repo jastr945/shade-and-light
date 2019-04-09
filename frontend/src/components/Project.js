@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './Project.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { Parallax } from 'react-scroll-parallax';
 import Observer from '@researchgate/react-intersection-observer';
 
 class Project extends Component {
@@ -9,11 +7,15 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      hovered: false
     }
+    this.setButtonHovered = this.setButtonHovered.bind(this);
   }
 
   setButtonHovered(value) {
-    // console.log(this);
+    this.setState({
+      hovered: !this.state.hovered
+    });
   }
 
   handleIntersection(event) {
@@ -23,11 +25,13 @@ class Project extends Component {
   }
 
   render() {
+    const hovered = this.state.hovered ? "hovered" : "";
+    console.log(hovered);
     return (
       <Observer onChange={this.handleIntersection.bind(this)}>
           <div className={`projects ${this.state.visibility}`}
-            onMouseEnter={this.setButtonHovered(true)}
-            onMouseLeave={this.setButtonHovered(false)}>
+            onMouseEnter={this.setButtonHovered}
+            onMouseLeave={this.setButtonHovered}>
             <div className="project">
                 {
                   (this.props.index % 2) > 0 ?
@@ -49,7 +53,11 @@ class Project extends Component {
                   </div>
                 }
             </div>
-            <div className="technologies" style={this.props.index % 2 > 0 ? {"textAlign": "left"} : {"textAlign": "right"}}>- - - - - - - - - - - - - - {this.props.project.technologies}</div>
+            <div
+              className={`technologies ${hovered}`}
+              style={this.props.index % 2 > 0 ? {"textAlign": "left"} : {"textAlign": "right"}}>
+              - - - - - - - - - - - - - - {this.props.project.technologies}
+              </div>
           </div>
       </Observer>
     );
