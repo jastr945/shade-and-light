@@ -95,9 +95,12 @@
 .technologies {
   display: none;
   margin-top: 2em;
-  font-size: 0.8em;
+  padding-top: 1em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7em;
   color: #008f11;
   animation: appear 0.5s forwards;
+  border-top: 1px solid #008f11;
 }
 
 .hovered {

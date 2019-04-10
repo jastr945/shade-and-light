@@ -48,7 +48,7 @@ class App extends Component {
                 coordinates = [-25, 0];
               }
               return (
-                <Parallax className="custom-class" x={coordinates} tagOuter="figure">
+                <Parallax key={i} className="custom-class" x={coordinates} tagOuter="figure">
                   <Project project={project} index={i} />
                 </Parallax>
               )
