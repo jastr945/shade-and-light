@@ -37,8 +37,8 @@ class Project extends Component {
                   <div className="projectBox">
                     <div className="projectInfo">
                       <p>{this.props.project.description}</p>
-                      {this.props.project.demo === true && <img className="small-icon eye" src={require('../static/eye-2-512.gif')} alt="View Demo"/>}
-                      {this.props.project.repo === true && <img className="small-icon" src={require('../static/70d584e3-4eb3-4ed1-8df8-944e9b123089.svg')} alt="View on GitHub"/>}
+                      {this.props.project.demo && <a href={this.props.project.demo} target="_blank" rel="noopener noreferrer"><img className="small-icon eye" src={require('../static/eye-2-512.gif')} alt="View Demo"/></a>}
+                      {this.props.project.repo && <a href={this.props.project.repo} target="_blank" rel="noopener noreferrer"><img className="small-icon" src={require('../static/70d584e3-4eb3-4ed1-8df8-944e9b123089.svg')} alt="View on GitHub"/></a>}
                     </div>
                     <img className="projectPic" src={this.props.project.pic} alt="project pic" />
                   </div> :
@@ -46,8 +46,8 @@ class Project extends Component {
                     <img className="projectPic" src={this.props.project.pic} alt="project pic" />
                     <div className="projectInfo">
                       <p>{this.props.project.description}</p>
-                      {this.props.project.demo === true && <img className="small-icon eye" src={require('../static/eye-2-512.gif')} alt="View Demo"/>}
-                      {this.props.project.repo === true && <img className="small-icon" src={require('../static/70d584e3-4eb3-4ed1-8df8-944e9b123089.svg')} alt="View on GitHub"/>}
+                      {this.props.project.demo && <a href={this.props.project.demo} rel="noopener noreferrer" target="_blank"><img className="small-icon eye" src={require('../static/eye-2-512.gif')} alt="View Demo"/></a>}
+                      {this.props.project.repo && <a href={this.props.project.repo} rel="noopener noreferrer" target="_blank"><img className="small-icon" src={require('../static/70d584e3-4eb3-4ed1-8df8-944e9b123089.svg')} alt="View on GitHub"/></a>}
                     </div>
                   </div>
                 }

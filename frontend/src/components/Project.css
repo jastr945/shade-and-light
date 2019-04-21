@@ -1,7 +1,7 @@
 @keyframes move {
   0% {}
   100% {
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
     opacity: 0;
   }
 }
@@ -34,7 +34,6 @@
 .eye {
   border: 1px solid gray;
   border-radius: 50%;
-  cursor: not-allowed;
 }
 
 .projects {
@@ -63,8 +62,10 @@
 }
 
 .projects:hover:before {
-  display: block;
+  display: flex;
+  opacity: 1;
   animation: move 1s forwards;
+  z-index: -999;
 }
 
 .projects:hover {
@@ -81,6 +82,7 @@
 
 .projectPic {
   height: 100px;
+  width: 100px;
   border-radius: 50%;
   padding: 0.5em;
   margin: auto 1em;
@@ -90,6 +92,10 @@
 .projectInfo {
   width: 70%;
   margin: auto 1em;
+}
+
+.projectInfo p {
+  text-align: justify;
 }
 
 .technologies {
