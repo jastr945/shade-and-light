@@ -28,10 +28,10 @@ var projects = [
     "demo": false
   },
   {
-    "description": "test5: A short description of a project featuring some of the technologies and tools...",
+    "description": "A simple login page layout created with React Router. This concise and straightforward piece of code has become of of my most viewed projects on CodePen.",
     "pic": "https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg",
-    "technologies": "Flask, AWS, Elasticsearch",
-    "repo": false,
+    "technologies": "React, React-Router, Responsive Design",
+    "repo": true,
     "demo": true
   }
 ];
