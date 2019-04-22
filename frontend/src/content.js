@@ -1,7 +1,26 @@
 var projects = [
   {
+    "description": "A simple RESTful API created and tested with Python and Flask. It's a web service to view, add, edit and delete shopping list items. Deployed with Docker on Heroku.",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/shopping_list.png",
+    "technologies": "Python, Flask, Unit Testing",
+    "repo": "https://github.com/jastr945/xperiments/tree/master/shopping_list_api",
+    "demo": "http://ancient-sea-11246.herokuapp.com/"
+  },
+  {
+    "description": "A Django app with a PostgreSQL database allowing users to keep track of books and movies that they plan to read or watch. Authenticates users with Auth0. Used to be deployed with Kubernetes on Google Kubernetes Engine.",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/wishlist.png",
+    "technologies": "Python, Django, Kubernetes, Auth0",
+    "repo": "https://github.com/jastr945/xperiments/tree/master/djangokube"
+  },
+  {
+    "description": "An open-source project: a map-based application for Sisters of the Road non-profit organization that helps users find hygiene resources in Portland.",
+    "pic": "",
+    "technologies": "React, Python, Django, Unit Testing, Teamwork",
+    "repo": "https://github.com/eputnam/latrine"
+  },
+  {
     "description": "Arduino project for IoT Hackathon 2018 by Women Who Code (Portland) at Puppet. Plug in your motion sensors and track your energy savings. The web app runs on a Flask server, deployed with Docker on Heroku.",
-    "pic": "https://pbs.twimg.com/profile_images/867761095909543937/hL_NQ7AZ_400x400.jpg",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/wattsup.jpg",
     "technologies": "IoT, Python, Flask, Teamwork",
     "repo": "http://github.com/danieldn/arduino-project",
     "demo": "https://stormy-beyond-38258.herokuapp.com/"
