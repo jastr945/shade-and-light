@@ -34,9 +34,13 @@ class App extends Component {
             <h3>Polina Jastrzebska</h3>
             <p>{'{'}Full-Stack Software Developer{'}'}</p>
             <div className="social">
-              <img className="icon" src={require('./static/linkedin-icon.png')} width={50} alt="LinkedIn"/>
-              <img className="icon" src={require('./static/iconfinder_GITHUB_1217178.png')} width={50} alt="LinkedIn"/>
-              <img className="icon" src={require('./static/gmail.png')} width={50} alt="LinkedIn"/>
+              <a href="https://www.linkedin.com/in/polinajastrzebska/" rel="noopener noreferrer" target="_blank">
+                <img className="icon" src={require('./static/linkedin-icon.png')} width={50} alt="LinkedIn"/>
+              </a>
+              <a href="https://github.com/jastr945" rel="noopener noreferrer" target="_blank">
+                <img className="icon" src={require('./static/iconfinder_GITHUB_1217178.png')} width={50} alt="GitHub"/>
+              </a>
+              <img className="icon" src={require('./static/gmail.png')} width={50} alt="E-mail"/>
             </div>
           </div>
           {
@@ -54,6 +58,8 @@ class App extends Component {
               )
             })
           }
+          <p className="stayTuned">More is always coming...</p>
+          <p>Stay tuned!</p>
           <footer>
             <small>&copy;
               {(new Date().getFullYear())}
