@@ -1,13 +1,13 @@
 var projects = [
   {
     "description": "A small Flask app (microservice) for generating and downloading a large number of PDF reports from the JSReport server as a .zip archive.",
-    "pic": "",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/kinto.png",
     "technologies": "Flask, SQLAlchemy, Docker",
     "repo": "https://github.com/jastr945/flask_batch_download"
   },
   {
     "description": "A React app using Kinto (lighweight JSON storage) backend. React Datagrid and react-jsonschema-form libraries in action.",
-    "pic": "",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/zip.png",
     "technologies": "Kinto, React.js, Docker",
     "repo": "https://github.com/jastr945/datagrid"
   },

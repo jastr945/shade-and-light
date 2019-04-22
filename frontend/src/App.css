@@ -73,7 +73,7 @@ footer {
   margin-top: 8em;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
   .mainContainer {
     width: 100%;
   }
@@ -83,10 +83,16 @@ footer {
   .App {
     font-size: 1em;
   }
+  .small-icon {
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .App {
     font-size: 0.8em;
+  }
+  .icon {
+    width: 36px;
   }
 }

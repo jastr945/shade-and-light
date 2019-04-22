@@ -113,8 +113,26 @@
   display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
+  .projects:hover {
+    animation: none;
+  }
+  .projects:hover:before {
+    animation: none;
+  }
+  .technologies {
+    display: flex;
+  }
   .projectBox {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .projectPic {
+    height: 70px;
+    width: 70px;
+    padding: 0.2em;
+    margin: auto 0.5em;
   }
 }
