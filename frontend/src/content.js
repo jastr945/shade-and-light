@@ -1,5 +1,29 @@
 var projects = [
   {
+    "description": "A small Flask app (microservice) for generating and downloading a large number of PDF reports from the JSReport server as a .zip archive.",
+    "pic": "",
+    "technologies": "Flask, SQLAlchemy, Docker",
+    "repo": "https://github.com/jastr945/flask_batch_download"
+  },
+  {
+    "description": "A React app using Kinto (lighweight JSON storage) backend. React Datagrid and react-jsonschema-form libraries in action.",
+    "pic": "",
+    "technologies": "Kinto, React.js, Docker",
+    "repo": "https://github.com/jastr945/datagrid"
+  },
+  {
+    "description": "This serverless app extracts free WiFi locations in Portland, converts them into geographic coordinates and allows users to find the closest WiFi spot. This is how I learned Angular.js and AWS Lambda!",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/wifi.jpg",
+    "technologies": "Python, Flask, Elasticsearch, Angular, Docker, AWS Lambda",
+    "repo": "https://github.com/jastr945/elastic_wifi"
+  },
+  {
+    "description": "The app is powered by Flask REST API, React.js and PostgreSQL, which run in separate containers as microservices, brought up by Docker Compose. Authenticates users with Auth0. Ready to be deployed with Kubernetes.",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/slider.png",
+    "technologies": "Python, Flask, React.js, Docker, Unit Testing, Kubernetes",
+    "repo": "https://github.com/jastr945/flask_photoalbum"
+  },
+  {
     "description": "A simple RESTful API created and tested with Python and Flask. It's a web service to view, add, edit and delete shopping list items. Deployed with Docker on Heroku.",
     "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/shopping_list.png",
     "technologies": "Python, Flask, Unit Testing",
@@ -14,7 +38,7 @@ var projects = [
   },
   {
     "description": "An open-source project: a map-based application for Sisters of the Road non-profit organization that helps users find hygiene resources in Portland.",
-    "pic": "",
+    "pic": "https://raw.githubusercontent.com/jastr945/shade-and-light/master/frontend/src/static/latrine.png",
     "technologies": "React, Python, Django, Unit Testing, Teamwork",
     "repo": "https://github.com/eputnam/latrine"
   },
